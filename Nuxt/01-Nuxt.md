@@ -1,17 +1,5 @@
 ## 1. Nuxt.js服务器端渲染
 
-**学习目标**
-
-- **了解Nuxt.js的作用**
-- **掌握Nuxt.js中的路由**
-- **掌握layouts、pages以及components的区别**
-- **能够在Nuxt.js项目中使用element-ui**
-- **掌握Nuxt.js中异步获取数据的方式**
-- **完成豆瓣电影小案例**
-- **掌握SEO的优化**
-
-### 1.1 Nuxt.js入门
-
 #### 1.1.1 什么是Nuxt.js
 
 [Vue服务端渲染官网](https://cn.vuejs.org/v2/guide/ssr.html)
@@ -208,54 +196,3 @@ module.exports = {
   }
 }
 ```
-
-### 1.7 小案例(豆瓣电影列表)
-
-**接口i**
-
-获取电影列表：`http://localhost:3301/in_theaters`    （in_theaters可以替换为coming_soon及top250）
-
-获取电影详情：`http://localhost:3301/in_theaters/1?_embed=details`
-
-#### 1.7.1 豆瓣电影首页创建
-
-#### 1.7.2 豆瓣电影列表页面创建
-
-#### 1.7.3 电影详情页面
-
-### 1.8 SEO优化
-
-#### 1.8.1 全局
-
-在nuxt.config.js配置文件中修改
-
-```
-  head: {
-    title: pkg.name,
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
-  },
-```
-
-
-
-#### 1.8.2 局部
-
-```
-    head(){
-        return{
-            title:'豆瓣电影',
-            meta:[{
-                'name':'keywords',
-                'content': '电影、经典电影、热映、电视剧、美剧、影评、电影院、电影票、排行、推荐'
-            }]
-        }
-    }
-```
-
